@@ -1,24 +1,331 @@
-body {
+/* style.css */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, 'Inter', sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+    scroll-behavior: smooth;
+    line-height: 1.5;
 }
 
 .navbar {
-    background-color: #333;
+    background-color: #111827;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .navbar a {
-    color: white;
+    color: #e2e8f0;
     text-decoration: none;
-    padding: 16px 20px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    border-radius: 40px;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .navbar a:hover {
-    background-color: #555;
+    background-color: #334155;
+    color: white;
+    transform: translateY(-2px);
 }
 
-.navbar a i {
-    margin-right: 8px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+section {
+    margin-bottom: 4.5rem;
+    scroll-margin-top: 5rem;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-left: 6px solid #3b82f6;
+    padding-left: 1.2rem;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero-card {
+    background: white;
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+.hero-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-info h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    background: linear-gradient(120deg, #0f172a, #2563eb);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.hero-tagline {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #334155;
+    margin: 0.75rem 0 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.badge-minecraft {
+    background: #2d2f36;
+    color: #facc15;
+    padding: 0.25rem 0.9rem;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-desc {
+    color: #1e293b;
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 1rem 0 1.6rem 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.3rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    background: #f1f5f9;
+    border-radius: 60px;
+    padding: 0.65rem 1.2rem;
+    color: #1e293b;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s;
+    border: 1px solid #e2e8f0;
+}
+
+.social-icon:hover {
+    background: #0f172a;
+    color: white;
+    border-color: #0f172a;
+    transform: translateY(-3px);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 130px));
+    gap: 1.8rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.skill-item {
+    background: white;
+    padding: 1rem 0.5rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    transition: all 0.25s ease;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.03);
+    border: 1px solid #eef2ff;
+}
+
+.skill-item i,
+.skill-item .devicon {
+    font-size: 3rem;
+}
+
+.skill-item span {
+    display: block;
+    margin-top: 0.7rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.skill-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 25px -12px rgba(0, 0, 0, 0.15);
+    border-color: #cbd5e1;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 1.6rem;
+    flex: 1 1 300px;
+    padding: 1.5rem;
+    transition: all 0.25s;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #94a3b8;
+}
+
+.project-icon {
+    font-size: 2.3rem;
+    background: #eef2ff;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0.8rem 0;
+}
+
+.project-tech span {
+    background: #e2e8f0;
+    padding: 0.2rem 0.7rem;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.project-link {
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.contact-wrapper {
+    background: white;
+    border-radius: 2rem;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    margin: 2rem 0 0.5rem;
+}
+
+.contact-buttons a {
+    background: #f1f5f9;
+    padding: 0.8rem 1.8rem;
+    border-radius: 60px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #0f172a;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s;
+}
+
+.contact-buttons a:hover {
+    background: #0f172a;
+    color: white;
+    transform: scale(1.02);
+}
+
+footer {
+    text-align: center;
+    padding: 1.8rem;
+    border-top: 1px solid #e2e8f0;
+    color: #475569;
+    font-size: 0.85rem;
+    background: #f8fafc;
+}
+
+@media (max-width: 720px) {
+    .hero-info h1 {
+        font-size: 2.3rem;
+    }
+    .navbar a {
+        padding: 0.4rem 1rem;
+        font-size: 0.85rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .skills-grid {
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(95px, 105px));
+    }
+}
+
+.highlight {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.minecraft-highlight {
+    background: #fef9e3;
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    border-left: 5px solid #facc15;
 }
