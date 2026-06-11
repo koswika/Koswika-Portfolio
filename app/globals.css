@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #121316;
+  color: #ffffff;
+}
+
+.btn {
+  border-radius: 40px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  color: #ffffff;
+}
+
+.btn-dark {
+  background-color: #2b2d31;
+  border-color: #2b2d31;
+  color: #ffffff;
+}
+
+.btn-dark:hover {
+  background-color: #404249;
+  border-color: #404249;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-outline-secondary {
+  border-color: #404249;
+  color: #ffffff;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #404249;
+  border-color: #404249;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: #5865f2;
+  border-color: #5865f2;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #4752c4;
+  border-color: #4752c4;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.card {
+  background-color: #1e1f22;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+  color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.navbar {
+  background-color: #0b0b0e !important;
+  border-bottom: 1px solid #1e1f22;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #ffffff;
+}
+
+.navbar .nav-link:hover {
+  color: #5865f2;
+}
+
+section {
+  scroll-margin-top: 5rem;
+}
+
+.text-muted {
+  color: #cccccc !important;
+}
+
+.bg-white {
+  background-color: #121316 !important;
+}
+
+footer {
+  background-color: #0b0b0e !important;
+  border-top: 1px solid #1e1f22 !important;
+  color: #cccccc !important;
+}
+
+.lead {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, .fw-bold {
+  color: #ffffff;
+}
+
+.badge.bg-secondary {
+  background-color: #2b2d31 !important;
+  color: #ffffff;
+}
+
+.btn-outline-light {
+  border-color: #404249;
+  color: #ffffff;
+}
+
+.btn-outline-light:hover {
+  background-color: #5865f2;
+  border-color: #5865f2;
+  color: #ffffff;
+}
+
+p, li, span, a:not(.btn) {
+  color: #ffffff;
+}
